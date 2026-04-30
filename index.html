@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="site-title">Design Gallery</h1>
+    <p class="site-subtitle">71 brand design systems — click to preview</p>
+    <div class="filter-bar" id="filterBar"></div>
+  </header>
+
+  <main class="gallery" id="gallery"></main>
+
+  <!-- モーダル -->
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="閉じる">✕</button>
+      <div class="modal-header">
+        <h2 class="modal-brand-name" id="modalBrandName"></h2>
+        <span class="modal-category" id="modalCategory"></span>
+      </div>
+      <div class="modal-tabs">
+        <button class="tab-btn active" data-tab="landing">ランディングページ</button>
+        <button class="tab-btn" data-tab="tokens">デザイントークン</button>
+      </div>
+      <div class="modal-body">
+        <div class="tab-panel active" id="tabLanding">
+          <iframe class="landing-frame" id="landingFrame" title="ランディングページプレビュー"></iframe>
+        </div>
+        <div class="tab-panel" id="tabTokens">
+          <div class="tokens-content" id="tokensContent"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
