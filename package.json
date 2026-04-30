@@ -1,0 +1,15 @@
+{
+  "name": "design-gallery",
+  "type": "module",
+  "scripts": {
+    "fetch": "node fetch-data.js",
+    "test": "node --test test/parser.test.js",
+    "serve": "npx serve ."
+  },
+  "dependencies": {
+    "getdesign": "latest"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
